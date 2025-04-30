@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Usuarios</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Inicio</a> |
+            <a href="{{ url_for('usuarios') }}">Usuarios</a>
+        </nav>
+    </header>
+
+    <section class="formulario">
+        <h2>Agregar Nuevo Usuario</h2>
+        <form action="{{ url_for('agregar_usuario') }}" method="post">
+            <input type="text" name="username" placeholder="Usuario" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit">Agregar</button>
+        </form>
+    </section>
+
+    <section class="lista">
+        <h2>Usuarios Registrados</h2>
+        <ul>
+            {% for usuario in usuarios %}
+            <li>
+                <strong>{{ usuario[1] }}</strong> 
+                <a class="eliminar" href="{{ url_for('eliminar_usuario', usuario_id=usuario[0]) }}">Eliminar</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>

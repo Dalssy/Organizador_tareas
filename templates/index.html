@@ -1,0 +1,48 @@
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul class="flashes">
+            {% for category, message in messages %}
+                <li class="flash {{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mis Tareas</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Inicio</a> |
+            <a href="{{ url_for('usuarios') }}">Usuarios</a>
+        </nav>
+    </header>
+
+    <section class="formulario">
+        <h2>Agregar Nueva Tarea</h2>
+        <form action="{{ url_for('agregar_tarea') }}" method="post">
+            <input type="text" name="titulo" placeholder="Título" required>
+            <input type="text" name="descripcion" placeholder="Descripción" required>
+            <button type="submit">Agregar</button>
+        </form>
+    </section>
+
+    <section class="lista">
+        <h2>Tareas Registradas</h2>
+        <ul>
+            {% for tarea in tareas %}
+            <li>
+                <strong>{{ tarea[1] }}</strong> - {{ tarea[2] }} ({{ tarea[3] }})
+                <a class="eliminar" href="{{ url_for('eliminar_tarea', tarea_id=tarea[0]) }}">Eliminar</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>

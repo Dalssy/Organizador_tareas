@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro - Dalssy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Registro de Nuevo Usuario</h1>
+
+    <form method="POST">
+        <label>Usuario:</label><br>
+        <input type="text" name="username" id="username" required><br><br>
+
+        <label>Contraseña:</label><br>
+        <input type="password" name="password" required><br><br>
+
+        <label>Confirmar Contraseña:</label><br>
+        <input type="password" name="password_confirm" required><br><br>
+
+        <button type="submit" class="boton">Registrarse</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffe6f0;
+    color: #5c005c;
+    margin: 0 auto;
+    /* padding: 0; */
+    width: 50%;
+}
+
+.dashboard-container {
+    background-color: white;
+    padding: 10px;margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 1200%;
+    max-width: 800px;
+}
+.container{
+    
+}
+
+header {
+    background-color: #ff66b2;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section.formulario, section.lista {
+    background-color: white;
+    margin: 30px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(255, 105, 180, 0.3);
+}
+
+h1 {
+    color: #d63384;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #cc0066;
+}
+
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ff66b2;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+}
+
+button {
+    background-color: #ff66b2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e60073;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ffe6f0;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #ff66b2;
+    border-radius: 5px;
+}
+
+a.eliminar {
+    float: right;
+    color: #cc0066;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.eliminar:hover {
+    text-decoration: underline;
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.task-table th, .task-table td {
+    padding: 12px;
+    border: 1px solid #f8bbd0;
+    text-align: center;
+}
+
+.task-table th {
+    background-color: #f8bbd0;
+    color: #880e4f;
+}
+
+.task-table tr:nth-child(even) {
+    background-color: #ffe6f0;
+}
+.flashes {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+.flash {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flash.success {
+    background-color: #ffb6c1; /* Rosita claro */
+    color: #333;
+}
+
+.flash.error {
+    background-color: #ff4c4c; /* Rojo para errores */
+    color: white;
+}
+.boton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff69b4;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.boton:hover {
+    background-color: #ff85c1;
+}
+
+.boton-rosa {
+    background-color: #ffa3d7;
+}
+
+.boton-rosa:hover {
+    background-color: #ffc0e1;
+}
+
+.logout-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f06292;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #e91e63;
+}
+
+.add-task-form {
+    margin-bottom: 20px;
+}
+
+.add-task-form input {
+    padding: 10px;
+    border: 1px solid #f8bbd0;
+    border-radius: 8px;
+    width: 70%;
+}
+
+.add-task-form button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #f06292;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add-task-form button:hover {
+    background-color: #e91e63;
+}
+
+.action-btn {
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    color: white;
+    margin: 2px;
+}
+
+.complete {
+    background-color: #ba68c8;
+}
+
+.delete {
+    background-color: #ef5350;
+}
+
+.complete:hover {
+    background-color: #ab47bc;
+}
+
+.delete:hover {
+    background-color: #e53935;
+}
