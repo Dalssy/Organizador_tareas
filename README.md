@@ -1,7 +1,7 @@
-# Organizador de Tareas
+# Organizador de Tareas#
 Aplicación de consola para gestionar tareas, permitiendo cambiar su estado y marcar como urgentes, desarrollada con Python y SQLite.
 
-## 🔧 Tecnologías utilizadas
+## 🔧 Tecnologías utilizadas ##
 
 - **Lenguaje:** Python
 - **Base de datos:** SQLite
